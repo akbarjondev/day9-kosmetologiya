@@ -8,6 +8,65 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Hello world!</h1>
+  <header class="header">
+    <div class="header__desktop">
+      <div class="container header__top-container">
+        <a class="header__logo-link" href="index.html">
+          <img class="header__logo" width="226" height="63" src="./images/logo.svg" alt="Company logo">
+        </a>
+  
+        <div class="header__wrapper">
+          <a class="header__tel" href="tel:0800508622">0 (800) 508-622</a>
+    
+          <div class="socials header__socials">
+            <a class="socials__link" href="#">
+              <img class="socials__icon" src="./images/insta.png" alt="insta logo">
+            </a>
+            <a class="socials__link" href="#">
+              <img class="socials__icon" src="./images/fb.png" alt="insta logo">
+            </a>
+          </div>
+    
+          <select class="socials__lang">
+            <option value="" selected></option>
+            <option value="en">Russian</option>
+            <option value="ua">English</option>
+          </select>
+        </div>
+      </div> <!-- End of header__top-container -->
+      
+      <div class="line"></div>
+  
+      <div class="container header__bottom-container">
+        <nav class="navs">
+          <a class="navs__link" href="#">Курсы обучения</a>
+          <a class="navs__link" href="#">Вебинары</a>
+          <a class="navs__link" href="#">Видео-уроки</a>
+          <a class="navs__link" href="#">Блог</a>
+          <a class="navs__link" href="#">О нас</a>
+          <a class="navs__link" href="#">Прайс</a>
+          <a class="navs__link" href="#">Рассписание</a>
+          <a class="navs__link" href="#">Акции</a>
+          <a class="navs__link" href="#">Магазин</a>
+        </nav>
+      </div> <!-- End of header__bottom-container -->
+      <button class="header__close-button">
+        <img class="header__close-image" width="30" height="30" src="./images/close-button.png" alt="Close">
+      </button>
+    </div> <!-- End of header__desktop -->
+    <div class="header__mobile">
+      <div class="container header__mobile-container">
+        <a class="header__logo-link" href="index.html">
+          <img class="header__logo" width="74" height="74" src="./images/logo-single.svg" alt="Company logo">
+        </a>
+        
+        <a class="header__tel" href="tel:0800508622">0 (800) 508-622</a>
+        
+        <button class="header__hamburger">
+          <img class="header__hamburger-image" width="50" height="24" src="./images/hamburger.png" alt="Menu">
+        </button>
+      </div>
+    </div>
+  </header> <!-- End of header -->
 </body>
 </html>

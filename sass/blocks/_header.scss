@@ -1,0 +1,148 @@
+.header {
+  &__top-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
+    padding-bottom: 10px;
+  }
+
+  &__logo {
+    width: 226px;
+    height: 63px;
+    display: block;
+  }
+
+  &__wrapper {
+    max-width: 545px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__tel {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 26px;
+    color: $main-black;
+
+    &::before {
+      content: "";
+      width: 28px;
+      height: 28px;
+      display: block;
+      margin-right: 22px;
+
+      @include bg("./../images/tel.png", auto, center);
+    }
+  }
+
+  .socials {
+    font-size: 0;
+
+    &__link:first-child {
+      margin-right: 26px;
+    }
+
+    &__lang {
+      appearance: none;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      background-image: url("./../images/rf.png"),
+        url("./../images/arrow-down.png");
+      background-size: 41px, 11px 6px;
+      background-repeat: no-repeat;
+      background-position: left center, right center;
+    }
+  }
+
+  &__bottom-container {
+    padding-top: 22px;
+    padding-bottom: 22px;
+
+    .navs {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      &__link {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 500;
+        color: $main-black;
+        text-decoration: none;
+        // margin-left: 5px;
+        // margin-right: 5px;
+      }
+    }
+  }
+
+  &__close-button {
+    width: 30px;
+    height: 30px;
+    display: none;
+
+    @include zero-btn();
+  }
+
+  &__hamburger {
+    @include zero-btn();
+  }
+
+  &__mobile {
+    display: none;
+  }
+}
+
+// Responsive
+
+@media only screen and (max-width: 1000px) {
+  .header {
+    &__desktop {
+      display: none;
+    }
+
+    &__mobile {
+      display: block;
+    }
+
+    &__mobile-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    &__logo {
+      width: 74px;
+      height: 74px;
+    }
+
+    &__hamburger {
+      order: -1;
+      width: 208px;
+      text-align: left;
+    }
+
+    &__tel {
+      font-size: 22px;
+      line-height: 37px;
+
+      &::before {
+        margin-right: 19px;
+      }
+    }
+  } // header
+
+  .line {
+    display: none;
+  }
+}

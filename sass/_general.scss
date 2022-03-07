@@ -7,7 +7,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
 }
 
 .container {
@@ -28,4 +28,10 @@ body {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: $main-light-green;
 }

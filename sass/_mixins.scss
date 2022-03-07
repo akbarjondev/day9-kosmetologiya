@@ -1,0 +1,13 @@
+@mixin bg($url, $size, $position) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: $size;
+  background-position: $position;
+}
+
+@mixin zero-btn() {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
