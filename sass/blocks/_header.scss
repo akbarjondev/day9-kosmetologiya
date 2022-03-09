@@ -78,8 +78,10 @@
         font-weight: 500;
         color: $main-black;
         text-decoration: none;
-        // margin-left: 5px;
-        // margin-right: 5px;
+
+        &:hover {
+          color: $main-green;
+        }
       }
     }
   }
@@ -98,6 +100,14 @@
 
   &__mobile {
     display: none;
+  }
+
+  .curtain {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
   }
 }
 
@@ -127,8 +137,8 @@
     }
 
     &__hamburger {
+      margin-right: 171px;
       order: -1;
-      width: 208px;
       text-align: left;
     }
 
@@ -140,9 +150,159 @@
         margin-right: 19px;
       }
     }
+
+    // menu
+    &__desktop {
+      display: block;
+      position: absolute;
+      background-color: pink;
+      min-height: 796px;
+      max-width: 370px;
+      width: 100%;
+      padding: 26px;
+    }
+
+    &__top-container,
+    &__bottom-container {
+      padding: 0;
+    }
+
+    &__wrapper {
+      max-width: none;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 50px;
+    }
+
+    &__tel {
+      margin-bottom: 40px;
+      font-size: 22px;
+      line-height: 26px;
+
+      &::before {
+        margin-right: 13px;
+        width: 23px;
+        height: 23px;
+        background-size: cover;
+      }
+    }
+
+    &__close-button {
+      display: block;
+      position: absolute;
+      top: 24px;
+      right: 26px;
+    }
+
+    .navs {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+
+      &__link {
+        font-size: 20px;
+        line-height: 15px;
+      }
+    }
+
+    &__socials {
+      position: absolute;
+      bottom: 120px;
+      left: 26px;
+
+      a:first-child {
+        margin-right: 30px;
+      }
+    }
+
+    &__logo-link--large {
+      display: none;
+    }
   } // header
+
+  .curtain {
+  }
 
   .line {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    &__hamburger {
+      margin-right: 133px;
+    }
+    &__hamburger-image {
+      width: 50px;
+      height: 29px;
+    }
+
+    &__tel {
+      &::before {
+        margin-right: 18px;
+        width: 23px;
+        height: 23px;
+        background-size: cover;
+      }
+
+      font-size: 18px;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header {
+    &__hamburger {
+      margin-right: 92px;
+    }
+
+    &__logo {
+      width: 45px;
+      height: 45px;
+    }
+
+    &__mobile-container {
+      padding: {
+        left: 23px;
+        right: 16px;
+        top: 6px;
+        bottom: 6px;
+      }
+    }
+
+    &__hamburger-image {
+      width: 29px;
+      height: 18px;
+    }
+
+    &__tel {
+      font-size: 12px;
+      line-height: 26px;
+
+      &::before {
+        width: 14px;
+        height: 14px;
+        margin-right: 13px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .header {
+    &__mobile-container {
+      padding: 9px 11px;
+      justify-content: space-between;
+    }
+
+    &__logo {
+      width: 39px;
+      height: 39px;
+    }
+
+    &__tel {
+      display: none;
+    }
   }
 }

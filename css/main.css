@@ -368,6 +368,10 @@ body {
   text-decoration: none;
 }
 
+.header__bottom-container .navs__link:hover {
+  color: #55a630;
+}
+
 .header__close-button {
   width: 30px;
   height: 30px;
@@ -387,6 +391,14 @@ body {
 
 .header__mobile {
   display: none;
+}
+
+.header .curtain {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -414,10 +426,10 @@ body {
     height: 74px;
   }
   .header__hamburger {
+    margin-right: 171px;
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
-    width: 208px;
     text-align: left;
   }
   .header__tel {
@@ -427,7 +439,136 @@ body {
   .header__tel::before {
     margin-right: 19px;
   }
+  .header__desktop {
+    display: block;
+    position: absolute;
+    background-color: pink;
+    min-height: 796px;
+    max-width: 370px;
+    width: 100%;
+    padding: 26px;
+  }
+  .header__top-container, .header__bottom-container {
+    padding: 0;
+  }
+  .header__wrapper {
+    max-width: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-bottom: 50px;
+  }
+  .header__tel {
+    margin-bottom: 40px;
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .header__tel::before {
+    margin-right: 13px;
+    width: 23px;
+    height: 23px;
+    background-size: cover;
+  }
+  .header__close-button {
+    display: block;
+    position: absolute;
+    top: 24px;
+    right: 26px;
+  }
+  .header .navs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 30px;
+  }
+  .header .navs__link {
+    font-size: 20px;
+    line-height: 15px;
+  }
+  .header__socials {
+    position: absolute;
+    bottom: 120px;
+    left: 26px;
+  }
+  .header__socials a:first-child {
+    margin-right: 30px;
+  }
+  .header__logo-link--large {
+    display: none;
+  }
   .line {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header__hamburger {
+    margin-right: 133px;
+  }
+  .header__hamburger-image {
+    width: 50px;
+    height: 29px;
+  }
+  .header__tel {
+    font-size: 18px;
+  }
+  .header__tel::before {
+    margin-right: 18px;
+    width: 23px;
+    height: 23px;
+    background-size: cover;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header__hamburger {
+    margin-right: 92px;
+  }
+  .header__logo {
+    width: 45px;
+    height: 45px;
+  }
+  .header__mobile-container {
+    padding-left: 23px;
+    padding-right: 16px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  .header__hamburger-image {
+    width: 29px;
+    height: 18px;
+  }
+  .header__tel {
+    font-size: 12px;
+    line-height: 26px;
+  }
+  .header__tel::before {
+    width: 14px;
+    height: 14px;
+    margin-right: 13px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .header__mobile-container {
+    padding: 9px 11px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header__logo {
+    width: 39px;
+    height: 39px;
+  }
+  .header__tel {
     display: none;
   }
 }
