@@ -103,11 +103,18 @@
   }
 
   .curtain {
+    display: none;
     position: absolute;
+    z-index: 100;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    );
   }
 }
 
@@ -153,13 +160,17 @@
 
     // menu
     &__desktop {
-      display: block;
       position: absolute;
-      background-color: pink;
+      z-index: 1000;
+      background-color: $main-white;
       min-height: 796px;
       max-width: 370px;
       width: 100%;
       padding: 26px;
+    }
+
+    &__desktop--on {
+      display: block;
     }
 
     &__top-container,
@@ -174,7 +185,7 @@
       margin-bottom: 50px;
     }
 
-    &__tel {
+    &__tel-1000 {
       margin-bottom: 40px;
       font-size: 22px;
       line-height: 26px;
@@ -218,10 +229,11 @@
     &__logo-link--large {
       display: none;
     }
-  } // header
 
-  .curtain {
-  }
+    .curtain--on {
+      display: block;
+    }
+  } // header
 
   .line {
     display: none;
